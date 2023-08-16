@@ -170,10 +170,7 @@ const icons: Record<EIcons, ReactNode> = {
 };
 
 
-export function Icon({ name }: IIconProps): JSX.Element | null {
-
-  if (typeof name === 'undefined') return null;
-
+export function Icon({ name }: IIconProps): JSX.Element {
   return (
     <>
       {icons[name]}

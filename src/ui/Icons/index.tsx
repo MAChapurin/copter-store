@@ -46,7 +46,7 @@ export * from './IconCheckedWhite';
 export * from './IconScale';
 export * from './IconHarvest';
 export * from './IconForest';
-export * from './IconBluePrint';
+export * from './IconBlueprint';
 export * from './IconPower';
 export * from './IconBuilding';
 export * from './IconBuilding2';

@@ -6,11 +6,14 @@ import Head from '../../node_modules/next/head';
 
 import { Roboto } from 'next/font/google';
 import { Section } from '@/components/Section';
-import { EIcons, Icon } from '@/ui/Icon';
+
+import { VitrinaSVG } from '@/components/VitrinaSVG';
+import { CardInfo } from '@/components/CardInfo';
+import { EIcons } from '@/ui/Icon';
 
 const roboto = Roboto({
   subsets: ['cyrillic', 'latin'], display: 'swap',
-  weight: ['400', '700']
+  weight: ['300', '400', '700']
 });
 
 
@@ -31,101 +34,46 @@ export default function Home(): JSX.Element {
             <div className={styles['info-wrap']}>
               <div className={styles.info}>
                 <span className={styles['span-info']}>50 000 Га</span>
-                <br/>
+                <br />
                 ежегодной обработки
               </div>
               <div className={styles.info}>
                 <span className={styles['span-info']}>30% </span>
-                <br/>
+                <br />
                 экономии средств
               </div>
               <div className={styles.info}>
                 <span className={styles['span-info']}>10 команд</span>
-                <br/>
+                <br />
                 экономии средств
               </div>
             </div>
           </>
         </Hero>
         <Section title='Наши преимущества' subtitle='почему нам доверяют'>
-          <div>
-            <Icon name={EIcons.vk}/>
-            <Icon name={EIcons.instagram}/>
-            <Icon name={EIcons.tiktok}/>
-            <Icon name={EIcons.basket}/>
-            <Icon name={EIcons.menu}/>
-            <Icon name={EIcons.home}/>
-            <Icon name={EIcons.insect}/>
-            <Icon name={EIcons.drone}/>
-            <Icon name={EIcons.map}/>
-            <Icon name={EIcons.copter}/>
-            <Icon name={EIcons.news}/>
-            <Icon name={EIcons.company}/>
-            <Icon name={EIcons.contacts}/>
-            <Icon name={EIcons.whatsup}/>
-            <Icon name={EIcons.telegram}/>
-            <Icon name={EIcons.wechat}/>
-            <Icon name={EIcons.people}/>
-            <Icon name={EIcons.tech}/>
-            <Icon name={EIcons.rub}/>
-            <Icon name={EIcons.services}/>
-            <Icon name={EIcons.copter2}/>
-            <Icon name={EIcons.web}/>
-            <Icon name={EIcons.arrow}/>
-            <Icon name={EIcons.soy}/>
-            <Icon name={EIcons.beet}/>
-            <Icon name={EIcons.raps}/>
-            <Icon name={EIcons.sunflower}/>
-            <Icon name={EIcons.corn}/>
-            <Icon name={EIcons.fruits}/>
-            <Icon name={EIcons.wallet}/>
-            <Icon name={EIcons.copter3}/>
-            <Icon name={EIcons.drone2}/>
-            <Icon name={EIcons.butterfly}/>
-            <Icon name={EIcons.time}/>
-            <Icon name={EIcons.spray}/>
-            <Icon name={EIcons.tractor}/>
-            <Icon name={EIcons.fly}/>
-            <Icon name={EIcons.closeline}/>
-            <Icon name={EIcons.check}/>
-            <Icon name={EIcons.setting}/>
-            <Icon name={EIcons.tools}/>
-            <Icon name={EIcons.resolution}/>
-            <Icon name={EIcons.coords}/>
-            <Icon name={EIcons.checkwhite}/>
-            <Icon name={EIcons.scale}/>
-            <Icon name={EIcons.harvest}/>
-            <Icon name={EIcons.forest}/>
-            <Icon name={EIcons.blueprint}/>
-            <Icon name={EIcons.power}/>
-            <Icon name={EIcons.building}/>
-            <Icon name={EIcons.building2}/>
-            <Icon name={EIcons.mountain}/>
-            <Icon name={EIcons.termometr}/>
-            <Icon name={EIcons.width}/>
-            <Icon name={EIcons.fuel}/>
-            <Icon name={EIcons.drone3}/>
-            <Icon name={EIcons.drone4}/>
-            <Icon name={EIcons.drone5}/>
-            <Icon name={EIcons.motorcycle}/>
-            <Icon name={EIcons.camera}/>
-            <Icon name={EIcons.mulcamera}/>
-            <Icon name={EIcons.thermal}/>
-            <Icon name={EIcons.modules}/>
-            <Icon name={EIcons.adapter}/>
-            <Icon name={EIcons.battery}/>
-            <Icon name={EIcons.lan}/>
-            <Icon name={EIcons.generator}/>
-            <Icon name={EIcons.equalizer}/>
-            <Icon name={EIcons.mapgeo}/>
-            <Icon name={EIcons.settingDrone}/>
-            <Icon name={EIcons.coding}/>
-            <Icon name={EIcons.tree}/>
-            <Icon name={EIcons.delivery}/>
-            <Icon name={EIcons.security}/>
-            <Icon name={EIcons.geolocation}/>
+          <div className={styles['card-info-wrap']}>
+            <CardInfo icon={EIcons.people} title='Квалифицированные сотрудники'>
+              Все наши сотрудники имеют многолетний опыт работы в&nbsp;сфере беспилотной авиации. Нами было реализовано множество проектов различной тематики и&nbsp;самой различной сложности.
+            </CardInfo>
+            <CardInfo icon={EIcons.tech} title='Высокотехнологичное оборудование '>
+              Наша компания использует современное оборудование, которое обеспечивает высокое качество в&nbsp;выполнении поставленных задач.
+            </CardInfo>
+            <CardInfo icon={EIcons.rub} title='Экономия'>
+              Использование беспилотных технологий экономит вам много времени и&nbsp;денег. За&nbsp;счет отсутствия технологической колеи сохраняется до&nbsp;6% урожая. Снижение расхода препаратов до&nbsp;30%
+            </CardInfo>
+            <CardInfo icon={EIcons.services} title='Оперативность'>
+              За&nbsp;рабочую смену наши специалисты способны защитить более 1000 гектар ваших полей, кустарников и&nbsp;деревьев.
+            </CardInfo>
+            <CardInfo icon={EIcons.drone} title='Собственное производство'>
+              Мы&nbsp;разрабатываем и&nbsp;производим беспилотные летательные аппараты, поэтому знаем все тонкости их&nbsp;работы и&nbsp;можем настроить их&nbsp;под конкретные задачи и&nbsp;потребности клиентов.
+            </CardInfo>
+            <CardInfo icon={EIcons.web} title='Свой сервис'>
+              Любой наш аппарат можно сдать на&nbsp;плановое техническое обслуживание или&nbsp;же в&nbsp;ремонт в&nbsp;наш собственный сервис,
+              который гарантирует качество и&nbsp;оперативность выполнения работ.
+            </CardInfo>
           </div>
         </Section>
+        <VitrinaSVG />
       </main>
     </>
   );
