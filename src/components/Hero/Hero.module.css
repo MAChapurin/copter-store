@@ -1,0 +1,27 @@
+.back {
+	position: relative;
+	z-index: 1;
+
+	min-height: 650px;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	/* background-image: url('/img/copter-bg-1.jpg'); */
+}
+
+.front {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+}
+
+.children {
+	z-index: 3;
+
+	max-width: 663px;
+
+	color: var(--main-color1);
+}

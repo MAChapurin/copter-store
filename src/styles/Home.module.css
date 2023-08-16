@@ -1,0 +1,27 @@
+.h1 {
+	margin-bottom: 150px;
+
+	font-size: 50px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: normal;
+}
+
+.info-wrap {
+	display: flex;
+	gap: 50px;
+}
+
+.span-info {
+	margin-bottom: 16px;
+
+	font-size: 48px;
+	font-weight: 400;
+	font-style: normal;
+	line-height: 48px;
+}
+
+.info {
+	font-size: 24px;
+	line-height: 24px;
+}

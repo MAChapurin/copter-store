@@ -1,0 +1,23 @@
+.section {
+	padding-top: 100px;
+}
+
+.title {
+	margin-bottom: 95px;
+
+	color: var(--main-color3);
+
+	font-size: 40px;
+}
+
+.subtitle {
+	position: absolute;
+	top: -15px;
+
+	color: var(--title-support-color);
+
+	font-size: 80px;
+	font-weight: 700;
+	font-style: normal;
+	line-height: 0.7;
+}
