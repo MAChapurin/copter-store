@@ -1,0 +1,38 @@
+.card {
+  max-width: 422px;
+  padding: 14px 25px;
+  background-color: var(--bg-card-color);
+}
+
+.img {
+  width: 100%;
+}
+
+.desc {
+  padding: 27px 45px;
+}
+
+.name {
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 34px;
+  margin-bottom: 30px;
+}
+
+.brand,
+.model {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 38px;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 50px;
+}

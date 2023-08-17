@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import styles from '@/styles/Home.module.css';
@@ -10,6 +12,9 @@ import { Section } from '@/components/Section';
 import { VitrinaSVG } from '@/components/VitrinaSVG';
 import { CardInfo } from '@/components/CardInfo';
 import { EIcons } from '@/ui/Icon';
+import { CardItem, ICardItem } from '@/components/CardItem';
+import { ServicesMain } from '@/components/ServicesMain';
+import { PartHidden } from '@/components/PartHidden';
 
 const roboto = Roboto({
   subsets: ['cyrillic', 'latin'], display: 'swap',
@@ -18,6 +23,12 @@ const roboto = Roboto({
 
 
 export default function Home(): JSX.Element {
+  const [coptersList, setCoptersList] = React.useState([]);
+  React.useEffect(() => {
+    fetch('/api/copters').then(res => res.json()).then(({ data }) => {
+      setCoptersList(data);
+    });
+  }, []);
   return (
     <>
       <Head>
@@ -72,6 +83,24 @@ export default function Home(): JSX.Element {
               который гарантирует качество и&nbsp;оперативность выполнения работ.
             </CardInfo>
           </div>
+        </Section>
+        <Section title='Наша продукция' subtitle='Наши предложения'>
+          <div className={styles['card-info-wrap']}>
+            {/* <CardItem img='/img/AGROdron.png' name='Агродрон AGR A22' brand='AGR' model='101-0101' price={15000} /> */}
+            {coptersList.length && coptersList.map((copter: ICardItem) => {
+              return <CardItem key={copter.id} {...copter} />;
+            })}
+          </div>
+        </Section>
+        <ServicesMain />
+        <Section title='О компании' subtitle='Кто мы такие'>
+          <PartHidden>
+            Компания STS.center применяет высокотехнологичные агродроны и&nbsp;БПЛА, которые модернизированы и&nbsp;собраны нашими инженерами для сельского и&nbsp;лесного хозяйства, а&nbsp;также для промышленности. В&nbsp;СТС Центр работают опытные агрономы, энтомологи, пилоты, менеджеры и&nbsp;инженеры. Сегодня мы&nbsp;имеем один из&nbsp;самых современных парков дронов в&nbsp;России, что позволяет нам выполнять работы широкого спектра от&nbsp;простой аэрофотосъемки до&nbsp;лидарного сканирования местности и&nbsp;тепловизионного контроля. Внедрение беспилотных технологий в&nbsp;вашем бизнесе поможет сэкономить время и&nbsp;деньги, а&nbsp;также позволит получить большое преимущество перед вашими конкурентами.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt corporis ea minima dolore corrupti iure, qui enim totam illo eveniet ex dolorem fugit ducimus doloremque optio quia, ipsa est nesciunt.Компания STS.center применяет высокотехнологичные агродроны и&nbsp;БПЛА, которые модернизированы и&nbsp;собраны нашими инженерами для сельского и&nbsp;лесного хозяйства, а&nbsp;также для промышленности. В&nbsp;СТС Центр работают опытные агрономы, энтомологи, пилоты, менеджеры и&nbsp;инженеры. Сегодня мы&nbsp;имеем один из&nbsp;самых современных парков дронов в&nbsp;России, что позволяет нам выполнять работы широкого спектра от&nbsp;простой аэрофотосъемки до&nbsp;лидарного сканирования местности и&nbsp;тепловизионного контроля. Внедрение беспилотных технологий в&nbsp;вашем бизнесе поможет сэкономить время и&nbsp;деньги, а&nbsp;также позволит получить большое преимущество перед вашими конкурентами.
+          </PartHidden>
+        </Section>
+        <Section title='Регионы присутствия' subtitle='Где мы работаем'>
+          <div></div>
         </Section>
         <VitrinaSVG />
       </main>

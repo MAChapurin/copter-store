@@ -1,0 +1,52 @@
+.section {
+  position: relative;
+  /* min-height: 650px; */
+  background-color: var(--bg-full-color);
+  background-image: url('/img/bg-copter-service.jpg');
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode:lighten;
+  padding-top: 154px;
+  padding-bottom: 54px;
+}
+
+.wrap {
+  position: relative;
+  z-index: 2;
+}
+
+.svg {
+  position: absolute;
+  height: 100%;
+  min-width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 30%;
+  z-index: 1;
+}
+
+.h2 {
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  margin-bottom: 50px;
+}
+
+.desc {
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 54px;
+  max-width: 590px;
+  margin-bottom: 70px;
+}
+
+.link {
+  max-width: 288px;
+  padding: 15px 20px;
+  text-align: center;
+  color: var(--main-color2);
+  border: 1px solid var(--main-color2);
+}

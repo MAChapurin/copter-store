@@ -1,0 +1,7 @@
+.btn {
+  max-width: 288px;
+  padding: 15px 20px;
+  text-align: center;
+  color: var(--main-color2);
+  border: 1px solid var(--main-color2);
+}

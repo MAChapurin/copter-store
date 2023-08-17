@@ -1,0 +1,46 @@
+.content {
+  position: relative;
+  max-width: 1195px;
+  transition: height 1s ease-in-out;
+  overflow: hidden;
+}
+
+.curtain {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background: linear-gradient(0deg, #181818 0%, rgba(24, 24, 24, 0.63) 100%);
+  z-index: 1;
+}
+
+.wrap {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  z-index: 2;
+}
+
+.line {
+  width: 200px;
+  height: 2px;
+  background-color: #8D8B8B;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+}
+
+.btn svg {
+  transition: transform 1s ease-in-out;
+}
+
+.btn.active svg {
+  transform: rotate(180deg);
+}
