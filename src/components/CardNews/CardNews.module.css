@@ -1,0 +1,69 @@
+.card {
+  max-width: 422px;
+  overflow: hidden;
+}
+
+.image-wrap {
+  position: relative;
+  padding: 22px;
+  margin-bottom: 50px;
+}
+
+.image-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 116px;
+  height: 116px;
+  border: 1px solid var(--main-color2);
+  border-left: none;
+  border-bottom: none;
+}
+
+.image-wrap::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 116px;
+  height: 116px;
+  border: 1px solid var(--main-color2);
+  border-right: none;
+  border-top: none;
+}
+
+.content-wrap {
+  padding: 22px;
+  padding-top: 0;
+}
+
+.h3 {
+  margin-bottom: 30px;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+.text {
+  margin: 0; /* Убираем внешний отступ */
+  -webkit-line-clamp: 6; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
+  margin-bottom: 30px;
+}
+
+.link {
+  color: var(--main-color2);
+  position: relative;
+}
+
+.link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--main-color2);
+}

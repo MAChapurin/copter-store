@@ -1,0 +1,39 @@
+.footer {
+  padding: 20px 0;
+  border-top: 1px solid var(--main-color2);
+  background-color: var(--bg-hf);
+}
+
+.footer-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 11px;
+}
+
+.social-group {
+  display: flex;
+  gap: 22px;
+  margin-right: 70px;
+  align-items: center;
+}
+
+.calling {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.social {
+  /* margin-right: 30px;
+  padding: 5px 6px 3px;
+  border: 2px solid var(--main-color2);
+  border-radius: 50%; */
+}
+
+.mra {
+  margin-right: auto;
+}

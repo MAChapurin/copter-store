@@ -9,7 +9,7 @@ import Head from '../../node_modules/next/head';
 import { Roboto } from 'next/font/google';
 import { Section } from '@/components/Section';
 
-import { VitrinaSVG } from '@/components/VitrinaSVG';
+// import { VitrinaSVG } from '@/components/VitrinaSVG';
 import { CardInfo } from '@/components/CardInfo';
 import { EIcons } from '@/ui/Icon';
 import { CardItem, ICardItem } from '@/components/CardItem';
@@ -17,6 +17,8 @@ import { ServicesMain } from '@/components/ServicesMain';
 import { PartHidden } from '@/components/PartHidden';
 import { RussiaMap } from '@/components/RussiaMap';
 import Link from 'next/link';
+import { CardNews, ICardNews } from '@/components/CardNews';
+import { Footer } from '@/components/Footer';
 
 const roboto = Roboto({
   subsets: ['cyrillic', 'latin'], display: 'swap',
@@ -24,12 +26,28 @@ const roboto = Roboto({
 });
 
 
+
+
 export default function Home(): JSX.Element {
   const [coptersList, setCoptersList] = React.useState([]);
-  React.useEffect(() => {
-    fetch('/api/copters').then(res => res.json()).then(({ data }) => {
+  const [newsList, setNewsList] = React.useState([]);
+
+  function getCopters(url: string): Promise<void> {
+    return fetch(url).then(res => res.json()).then(({ data }) => {
       setCoptersList(data);
     });
+  }
+
+  function getNews(url: string): Promise<void>  {
+    return fetch(url).then(res => res.json()).then(({ data }) => {
+      console.log(data);
+      setNewsList(data);
+    });
+  }
+
+  React.useEffect(() => {
+    getCopters('/api/copters');
+    getNews('api/news');
   }, []);
   return (
     <>
@@ -106,21 +124,29 @@ export default function Home(): JSX.Element {
         </Section>
         <Section title='Партнеры' subtitle='Наши клиенты'>
           <div className={styles['client-wrap']}>
-            <Link style={{padding: '10px'}} href='/'>
+            <Link style={{ padding: '10px' }} href='/'>
               <img src="/img/logo_bionovatic.svg" alt="logo_bionovatic" />
             </Link>
-            <Link style={{padding: '10px'}} href='/'>
+            <Link style={{ padding: '10px' }} href='/'>
               <img src="/img/logo_bayer.svg" alt="logo_bayer" />
             </Link>
-            <Link style={{padding: '10px'}} href='/'>
+            <Link style={{ padding: '10px' }} href='/'>
               <img src="/img/logo_corteva.svg" alt="logo_corteva" />
             </Link>
-            <Link style={{padding: '10px'}} href='/'>
+            <Link style={{ padding: '10px' }} href='/'>
               <img src="/img/logo_kws.svg" alt="logo_kws" />
             </Link>
           </div>
         </Section>
-        <VitrinaSVG />
+        <Section title='Новости' subtitle='Что у нас нового'>
+          <div className={styles.news}>
+            {newsList.length && newsList.map((news: ICardNews)=> {
+              return <CardNews key={news.id} {...news}/>
+            })}
+          </div>
+        </Section>
+        <Footer/>
+        {/* <VitrinaSVG /> */}
       </main>
     </>
   );

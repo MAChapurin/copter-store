@@ -49,3 +49,8 @@
 	filter: grayscale(0);
 }
 
+.news {
+	display: flex;
+	justify-content: space-between;
+}
+
