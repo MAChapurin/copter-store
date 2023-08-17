@@ -33,3 +33,19 @@
 	margin-bottom: 50px;
 }
 
+.client-wrap {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.client-wrap img {
+	filter: grayscale(0.9);
+	transition: filter 0.3s ease-in-out;
+}
+
+.client-wrap img:hover {
+	filter: grayscale(0);
+}
+

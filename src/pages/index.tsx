@@ -15,6 +15,8 @@ import { EIcons } from '@/ui/Icon';
 import { CardItem, ICardItem } from '@/components/CardItem';
 import { ServicesMain } from '@/components/ServicesMain';
 import { PartHidden } from '@/components/PartHidden';
+import { RussiaMap } from '@/components/RussiaMap';
+import Link from 'next/link';
 
 const roboto = Roboto({
   subsets: ['cyrillic', 'latin'], display: 'swap',
@@ -99,8 +101,24 @@ export default function Home(): JSX.Element {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt corporis ea minima dolore corrupti iure, qui enim totam illo eveniet ex dolorem fugit ducimus doloremque optio quia, ipsa est nesciunt.Компания STS.center применяет высокотехнологичные агродроны и&nbsp;БПЛА, которые модернизированы и&nbsp;собраны нашими инженерами для сельского и&nbsp;лесного хозяйства, а&nbsp;также для промышленности. В&nbsp;СТС Центр работают опытные агрономы, энтомологи, пилоты, менеджеры и&nbsp;инженеры. Сегодня мы&nbsp;имеем один из&nbsp;самых современных парков дронов в&nbsp;России, что позволяет нам выполнять работы широкого спектра от&nbsp;простой аэрофотосъемки до&nbsp;лидарного сканирования местности и&nbsp;тепловизионного контроля. Внедрение беспилотных технологий в&nbsp;вашем бизнесе поможет сэкономить время и&nbsp;деньги, а&nbsp;также позволит получить большое преимущество перед вашими конкурентами.
           </PartHidden>
         </Section>
-        <Section title='Регионы присутствия' subtitle='Где мы работаем'>
-          <div></div>
+        <Section title='Страны присутствия' subtitle='Где мы работаем'>
+          <RussiaMap />
+        </Section>
+        <Section title='Партнеры' subtitle='Наши клиенты'>
+          <div className={styles['client-wrap']}>
+            <Link style={{padding: '10px'}} href='/'>
+              <img src="/img/logo_bionovatic.svg" alt="logo_bionovatic" />
+            </Link>
+            <Link style={{padding: '10px'}} href='/'>
+              <img src="/img/logo_bayer.svg" alt="logo_bayer" />
+            </Link>
+            <Link style={{padding: '10px'}} href='/'>
+              <img src="/img/logo_corteva.svg" alt="logo_corteva" />
+            </Link>
+            <Link style={{padding: '10px'}} href='/'>
+              <img src="/img/logo_kws.svg" alt="logo_kws" />
+            </Link>
+          </div>
         </Section>
         <VitrinaSVG />
       </main>
