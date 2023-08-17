@@ -1,4 +1,4 @@
-import { ICardNews } from './../../components/CardNews/index';
+import { ICardNews } from '../../components/Card/index';
 
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';

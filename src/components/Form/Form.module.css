@@ -1,0 +1,49 @@
+.container {
+  min-height: 450px;
+}
+
+.form {
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.desc {
+  position: relative;
+  font-size: 24px;
+  line-height: 40px;
+  z-index: 3;
+}
+
+.input {
+  padding: 10px 15px;
+  margin-right: 40px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #4b4a4a;
+  color: var(--main-color);
+  z-index: 3;
+}
+
+.input:last-of-type {
+  margin-right: 60px;
+}
+
+.drone {
+  position: absolute;
+  top: -300px;
+  right: 100px;
+  z-index: 2;
+}
+
+.circles {
+  position: absolute;
+  top: -200px;
+  right: 30%;
+  z-index: 1;
+}
+
+.btn {
+  position: relative;
+  z-index: 3;
+}

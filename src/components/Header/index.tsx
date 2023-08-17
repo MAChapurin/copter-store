@@ -1,5 +1,6 @@
 import { EIcons, Icon } from "@/ui/Icon";
 import Link from "next/link";
+import { DropDownMenu } from "../DropDownMenu";
 import styles from './Header.module.css';
 
 
@@ -55,6 +56,7 @@ export function Header() {
             </defs>
           </svg>
         </button>
+        <DropDownMenu/>
       </div>
     </header>
   );

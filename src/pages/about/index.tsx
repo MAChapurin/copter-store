@@ -1,5 +1,15 @@
+import { Card } from "@/components/Card";
+import { Footer } from "@/components/Footer";
+import { Form } from "@/components/Form";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { PartHidden } from "@/components/PartHidden";
+import { RussiaMap } from "@/components/RussiaMap";
+import { Section } from "@/components/Section";
 import Head from "next/head";
-import Link from "next/link";
+// import Link from "next/link";
+
+import styles from './about.module.css';
 
 export default function About(): JSX.Element {
   return (
@@ -10,11 +20,55 @@ export default function About(): JSX.Element {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
       <main>
-        <h2>About page</h2>
-        <Link href="/">Home</Link>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus nostrum est dolores numquam commodi ipsum, unde laboriosam reprehenderit nam necessitatibus quos! At voluptatum soluta voluptatem rem maxime consequatur quaerat repellat?</p>
+        <Hero src={'/img/bg-about.jpg'} title='О компании AgroScout' desc="Наша команда состоит из&nbsp;профессионалов в&nbsp;области эффективного применения беспилотных летательных аппаратов">
+
+          <>
+            {/* <h2 className={styles.h1}></h2> */}
+            <div className={styles['info-wrap']}>
+              <div className={styles.info}>
+                <span className={styles['span-info']}>50 000 Га</span>
+                <br />
+                ежегодной обработки
+              </div>
+              <div className={styles.info}>
+                <span className={styles['span-info']}>30% </span>
+                <br />
+                экономии средств
+              </div>
+              <div className={styles.info}>
+                <span className={styles['span-info']}>10 команд</span>
+                <br />
+                экономии средств
+              </div>
+            </div>
+          </>
+
+        </Hero>
+        <Section title='О компании' subtitle='Кто мы такие ?'>
+          <PartHidden>
+            Компания STS.center применяет высокотехнологичные агродроны и&nbsp;БПЛА, которые модернизированы и&nbsp;собраны нашими инженерами для сельского и&nbsp;лесного хозяйства, а&nbsp;также для промышленности. В&nbsp;СТС Центр работают опытные агрономы, энтомологи, пилоты, менеджеры и&nbsp;инженеры. Сегодня мы&nbsp;имеем один из&nbsp;самых современных парков дронов в&nbsp;России, что позволяет нам выполнять работы широкого спектра от&nbsp;простой аэрофотосъемки до&nbsp;лидарного сканирования местности и&nbsp;тепловизионного контроля. Внедрение беспилотных технологий в&nbsp;вашем бизнесе поможет сэкономить время и&nbsp;деньги, а&nbsp;также позволит получить большое преимущество перед вашими конкурентами.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt corporis ea minima dolore corrupti iure, qui enim totam illo eveniet ex dolorem fugit ducimus doloremque optio quia, ipsa est nesciunt.Компания STS.center применяет высокотехнологичные агродроны и&nbsp;БПЛА, которые модернизированы и&nbsp;собраны нашими инженерами для сельского и&nbsp;лесного хозяйства, а&nbsp;также для промышленности. В&nbsp;СТС Центр работают опытные агрономы, энтомологи, пилоты, менеджеры и&nbsp;инженеры. Сегодня мы&nbsp;имеем один из&nbsp;самых современных парков дронов в&nbsp;России, что позволяет нам выполнять работы широкого спектра от&nbsp;простой аэрофотосъемки до&nbsp;лидарного сканирования местности и&nbsp;тепловизионного контроля. Внедрение беспилотных технологий в&nbsp;вашем бизнесе поможет сэкономить время и&nbsp;деньги, а&nbsp;также позволит получить большое преимущество перед вашими конкурентами.
+          </PartHidden>
+        </Section>
+        <Section title="Наша команда" subtitle="О нас">
+          <div className={styles['info-wrap']}>
+            <Card img="/img/director.jpg" title="Олег Иванченко" text="Генеральный директор компнии \n\n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi facilisi ultrices ut consectetur nibh tincidunt. Elit nunc, volutpat, eu ac egestas suspendisse vulputate. Sed feugiat gravida pellentesque dictum nisi rhoncus montes. Duis tellus auctor eget nibh sed erat risus lorem." />
+            <Card img="/img/director.jpg" title="Олег Иванченко" text="Генеральный директор компнии \n\n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi facilisi ultrices ut consectetur nibh tincidunt. Elit nunc, volutpat, eu ac egestas suspendisse vulputate. Sed feugiat gravida pellentesque dictum nisi rhoncus montes. Duis tellus auctor eget nibh sed erat risus lorem." />
+            <Card img="/img/director.jpg" title="Олег Иванченко" text="Генеральный директор компнии \n\n Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisi facilisi ultrices ut consectetur nibh tincidunt. Elit nunc, volutpat, eu ac egestas suspendisse vulputate. Sed feugiat gravida pellentesque dictum nisi rhoncus montes. Duis tellus auctor eget nibh sed erat risus lorem." />
+          </div>
+        </Section>
+        <Section title='Страны присутствия' subtitle='Где мы работаем'>
+          <RussiaMap />
+        </Section>
+        <Section title="Нужна помошь?" subtitle="Напишите нам">
+          <>
+           <Form/>
+          </>
+        </Section>
       </main>
+      <Footer/>
     </>
   );
 }

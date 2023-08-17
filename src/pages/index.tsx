@@ -17,7 +17,7 @@ import { ServicesMain } from '@/components/ServicesMain';
 import { PartHidden } from '@/components/PartHidden';
 import { RussiaMap } from '@/components/RussiaMap';
 import Link from 'next/link';
-import { CardNews, ICardNews } from '@/components/CardNews';
+import { Card, ICardNews } from '@/components/Card';
 import { Footer } from '@/components/Footer';
 
 const roboto = Roboto({
@@ -57,11 +57,11 @@ export default function Home(): JSX.Element {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Header />
       <main className={`${styles.main} ${roboto.className}`}>
-        <Header />
-        <Hero src={'/img/copter-bg-1.jpg'}>
+        <Hero src={'/img/copter-bg-1.jpg'} title='AgroScout - беспилотные технологии для сельского хозяйства и промышлености'>
           <>
-            <h1 className={styles.h1}>AgroScout - беспилотные технологии для сельского хозяйства и промышлености</h1>
+            {/* <h2 className={styles.h1}></h2> */}
             <div className={styles['info-wrap']}>
               <div className={styles.info}>
                 <span className={styles['span-info']}>50 000 Га</span>
@@ -141,13 +141,13 @@ export default function Home(): JSX.Element {
         <Section title='Новости' subtitle='Что у нас нового'>
           <div className={styles.news}>
             {newsList.length && newsList.map((news: ICardNews)=> {
-              return <CardNews key={news.id} {...news}/>
+              return <Card key={news.id} {...news} isNews />;
             })}
           </div>
         </Section>
-        <Footer/>
         {/* <VitrinaSVG /> */}
       </main>
+        <Footer/>
     </>
   );
 }
