@@ -1,0 +1,39 @@
+.container {
+  position: relative;
+  min-height: 600px;
+  width: 100%;
+}
+
+.contacts {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 30px 100px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-card-color);
+  z-index: 3;
+  height: 100%;
+}
+
+.h3 {
+  font-size: 62px;
+  line-height: 62px;
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 18px;
+  margin-bottom: 14px;
+}
+
+.info {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 30px;
+}
