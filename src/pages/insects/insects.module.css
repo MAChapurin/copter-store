@@ -1,0 +1,12 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    list-style-type: none;
+}
+
+.item {
+    font-size: 18px;
+    line-height: 40px;
+    display: flex;
+    gap: 10px;
+}
