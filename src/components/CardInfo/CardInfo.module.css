@@ -1,8 +1,8 @@
 .card {
   padding: 50px 30px;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   min-width: 250px;
-  max-width: 32%;
+  /* max-width: 32%; */
   font-size: 18px;
   font-weight: 300;
   line-height: 31px;

@@ -8,6 +8,7 @@ import { Hero } from '@/components/Hero';
 import { EIcons, Icon } from '@/ui/Icon';
 import { Section } from '@/components/Section';
 import { PartHidden } from '@/components/PartHidden';
+import { CardInfo } from '@/components/CardInfo';
 
 export default function Insects() {
     return (
@@ -50,13 +51,74 @@ export default function Insects() {
                 </Hero>
                 <Section title='Энтомофаги' subtitle='Об Услуге'>
                     <PartHidden>
-                    Компания AGROSCOUT за&nbsp;время научной работы совместно с&nbsp;ведущими НИИ страны разработала высокоэффективный метод защиты посевов от&nbsp;вредителей с&nbsp;использованием энтомофагов. Самый современный технопарк в&nbsp;стране, позволяет нам точно и&nbsp;быстро вносить трихограмму, златоглазку и&nbsp;габробракон на&nbsp;любых посевных площадях, включая труднодоступные участки, без применения тяжелой техники.
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias autem porro quam vel magni obcaecati facere consectetur sunt et ut, aspernatur quisquam voluptatum sit quaerat. Hic dignissimos vero sed omnis!
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur alias nihil, quam, vitae officiis error, deleniti saepe laboriosam praesentium a deserunt fugit eos culpa unde! Possimus quis perspiciatis aut ipsa?
+                        Компания AGROSCOUT за&nbsp;время научной работы совместно с&nbsp;ведущими НИИ страны разработала высокоэффективный метод защиты посевов от&nbsp;вредителей с&nbsp;использованием энтомофагов. Самый современный технопарк в&nbsp;стране, позволяет нам точно и&nbsp;быстро вносить трихограмму, златоглазку и&nbsp;габробракон на&nbsp;любых посевных площадях, включая труднодоступные участки, без применения тяжелой техники.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias autem porro quam vel magni obcaecati facere consectetur sunt et ut, aspernatur quisquam voluptatum sit quaerat. Hic dignissimos vero sed omnis!
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur alias nihil, quam, vitae officiis error, deleniti saepe laboriosam praesentium a deserunt fugit eos culpa unde! Possimus quis perspiciatis aut ipsa?
                     </PartHidden>
                 </Section>
                 <Section title='Приемущества внесения энтомофагов' subtitle='Плюсы использования'>
-                    
+                    <ul className={styles.container}>
+                        <li className={styles.item}>
+                            <CardInfo icon={EIcons.rub} title='Доступная цена'>
+                                <p>Низкая стоимость по сравнению с расходами на химическую обработку растений.</p>
+                            </CardInfo>
+                        </li>
+                        <li className={styles.item}>
+                            <CardInfo icon={EIcons.wallet} title='Экономия'>
+                                <p>Низкие затраты на внесение трихограмм, златоглазки и габробракону по сравнению с трационными методами обработки</p>
+                            </CardInfo>
+                        </li>
+                        <li className={styles.item}>
+                            <CardInfo icon={EIcons.copter2} title='Эффективность'>
+                                <p>Высокая эффективность, снижение потерь урожайности в результате обработки с/х культур более чем на 90%.</p>
+                            </CardInfo>
+                        </li>
+                        <li className={styles.item}>
+                            <CardInfo icon={EIcons.drone2} title='Оперативность'>
+                                <p>За 60 минут полета дрон со специальным дозатором обрабатывает до 100 гектаров.</p>
+                            </CardInfo>
+                        </li>
+                        <li className={styles.item}>
+                            <CardInfo icon={EIcons.insect2} title='Широкий спектр действия'>
+                                <p>Двукратное внесение позволяет уничтожать несколько поколений вредителей.</p>
+                            </CardInfo>
+                        </li>
+                        <li className={styles.item}>
+                            <CardInfo icon={EIcons.copter3} title='Равномерное распределение'>
+                                <p>Внесение с БПЛА гарантирует внедрение особей трихограммы, златогласки, габробракрну равномерно на всех участках поля </p>
+                            </CardInfo>
+                        </li>
+                    </ul>
+                </Section>
+                <Section title='С помощью энтомофагов мы решаем следующие проблемы:' subtitle='Проблемы кторые мы решаем'>
+                    <ul className={styles.container}>
+                        <li className={styles.item2}>
+                            <div className={styles.circle}>1</div>
+                            <p>Уничтожение опылителей (пчелы, шмели).</p>
+                        </li>
+                        <li className={styles.item2}>
+                            <div className={styles.circle}>3</div>
+                            <p>уничтожения природных энтомофагов (златоглазки, божьи коровки и т.д)</p>
+                        </li>
+                        <li className={styles.item2}>
+                            <div className={styles.circle}>5</div>
+                            <p>Дефицита воды для опрыскивания</p>
+                        </li>
+                        <li className={styles.item2}>
+                            <div className={styles.circle}>2</div>
+                            <p>Потеря урожая от работы тяжелой техники</p>
+                        </li>
+                        <li className={styles.item2}>
+                            <div className={styles.circle}>4</div>
+                            <p>Уничтожение на посевах таких вредителей как совки, огневки, кукурузные и стеблевые мотельки, тля, клещи. </p>
+                        </li>
+                        <li className={styles.item2}>
+                            <div className={styles.circle}>6</div>
+                            <p>Резистентности у вредителей
+                                к химическим препаратам, что ведет
+                                за собой увеличение инсектицидной нагрузки, соответственно увеличение бюджета на защиту растений.</p>
+                        </li>
+                    </ul>
                 </Section>
             </main>
             <Footer />
