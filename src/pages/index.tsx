@@ -95,7 +95,7 @@ export default function Home(): JSX.Element {
             <CardInfo icon={EIcons.services} title='Оперативность'>
               За&nbsp;рабочую смену наши специалисты способны защитить более 1000 гектар ваших полей, кустарников и&nbsp;деревьев.
             </CardInfo>
-            <CardInfo icon={EIcons.drone} title='Собственное производство'>
+            <CardInfo icon={EIcons.drone4} title='Собственное производство'>
               Мы&nbsp;разрабатываем и&nbsp;производим беспилотные летательные аппараты, поэтому знаем все тонкости их&nbsp;работы и&nbsp;можем настроить их&nbsp;под конкретные задачи и&nbsp;потребности клиентов.
             </CardInfo>
             <CardInfo icon={EIcons.web} title='Свой сервис'>

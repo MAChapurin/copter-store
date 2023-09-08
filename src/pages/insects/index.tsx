@@ -11,6 +11,7 @@ import { PartHidden } from '@/components/PartHidden';
 import { CardInfo } from '@/components/CardInfo';
 import { CardGrand } from '@/components/CardGrand';
 import { Form } from '@/components/Form';
+import { Steps } from '@/components/Steps';
 
 export default function Insects() {
     return (
@@ -59,7 +60,7 @@ export default function Insects() {
                     </PartHidden>
                 </Section>
                 <Section title='Приемущества внесения энтомофагов' subtitle='Плюсы использования'>
-                    <ul className={styles.container}>
+                    <ul className={styles.ul}>
                         <li className={styles.item}>
                             <CardInfo icon={EIcons.rub} title='Доступная цена'>
                                 <p>Низкая стоимость по сравнению с расходами на химическую обработку растений.</p>
@@ -93,7 +94,7 @@ export default function Insects() {
                     </ul>
                 </Section>
                 <Section title='С помощью энтомофагов мы решаем следующие проблемы:' subtitle='Проблемы кторые мы решаем'>
-                    <ul className={styles.container}>
+                    <ul className={styles.ul}>
                         <li className={styles.item2}>
                             <div className={styles.circle}>1</div>
                             <p>Уничтожение опылителей (пчелы, шмели).</p>
@@ -166,6 +167,20 @@ export default function Insects() {
                         titleList='Габробракон эффективный против таких вредителей:'
                         list={['Совки', 'Мотыльки', ' Плодожорки', 'Огневки', 'Листовертки']}
                     />
+                </Section>
+                <Section title='Как это работает' subtitle='Этапы работы'>
+                    <Steps list={
+                        [
+                            'Исследуем состояние посевов популяцию вредителей',
+                            'определяем необходимые энтомофаги',
+                            'Выращиваем необходимую популяцию энтомофагов в собственной лаборатории',
+                            'вносим энтомофагов при помощи БПЛА',
+                            'исследуем посевы',
+                            'Определяем наиболее эффективные энтомофаги и график их внесения',
+                            'выращиваем энтомофагов',
+                            'Вносим энтомофаги по уникальной схеме на поля при помощи дронов',
+                        ]} />
+
                 </Section>
                 <Section title="Нужна помошь?" subtitle="Напишите нам">
                     <Form />
